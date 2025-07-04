@@ -1,0 +1,151 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(51deg, #272727, black);
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    transition: background 0.4s ease, color 0.4s ease;
+}
+
+header {
+    text-align: center;
+    color: white;
+    font-size: 50px;
+    background: linear-gradient(37deg, #c75a00, #c70019);
+    text-shadow: 1px 1px 1px black;
+    padding: 70px 20px;
+}
+
+header p {
+    text-align: center;
+    font-size: 20px;
+    padding-top: 25px;
+}
+
+main {
+    flex: 1;
+}
+
+h1 {
+    color: white;
+    text-align: center;
+    margin: 0;
+    padding: 10px 20px;
+    text-shadow: 1px 1px 5px gold;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+section {
+    padding: 60px 0;
+    border-bottom: 1px solid #2a2a2a;
+}
+
+section p, section li {
+    color: #e0e0e0;
+    text-align: center;
+    font-size: 18px;
+    padding-top: 15px;
+}
+
+.blog-entry {
+    margin: 50px 15px 0 15px;
+    padding: 30px 15px;
+    border-bottom: 1px solid #333;
+    background: #2a2a2a;
+    transition: background 0.3s ease;
+}
+
+.blog-entry:hover {
+    background: #333;
+}
+
+.blog-entry p {
+    color: #ddd;
+    text-align: center;
+    font-size: 18px;
+    max-width: 900px;
+    margin: auto;
+}
+
+footer {
+    background-color: #1a1a1a;
+    color: #ccc;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 14px;
+}
+
+.burger {
+    position: fixed;
+    top: 25px;
+    left: 20px;
+    width: 30px;
+    height: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+.burger span {
+    height: 4px;
+    width: 100%;
+    background: white;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.side-menu {
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 220px;
+    height: 100%;
+    background: #1f1f1f;
+    padding: 60px 20px;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.6);
+    transition: left 0.3s ease;
+    z-index: 1000;
+}
+
+.side-menu ul {
+    list-style: none;
+}
+
+.side-menu li {
+    margin: 20px 0;
+}
+
+.side-menu a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.side-menu.open {
+    left: 0;
+}
+
+.burger.open span:nth-child(1) {
+    transform: rotate(45deg) translate(9px, 9px);
+}
+
+.burger.open span:nth-child(2) {
+    opacity: 0;
+}
+
+.burger.open span:nth-child(3) {
+    transform: rotate(-45deg) translate(6px, -6px);
+}
