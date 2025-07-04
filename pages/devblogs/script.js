@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-    fetch("https://www.dropbox.com/scl/fi/aefr9yxt04voudn0zm5wv/devblogs.json?rlkey=3n0ptnn81kh7998om9ivf6i1x&st=9gpdjmms&dl=1")
+    fetch("https://www.dropboxusercontent.com/scl/fi/aefr9yxt04voudn0zm5wv/devblogs.json?rlkey=3n0ptnn81kh7998om9ivf6i1x&st=9gpdjmms&dl=1")
         .then(response => response.json())
         .then(data => renderBlogs(data))
         .catch(error => console.error("Ошибка при загрузке девблогов:", error));
